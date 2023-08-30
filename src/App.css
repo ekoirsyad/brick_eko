@@ -1,42 +1,131 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 20px;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/** START LOADER STYLE **/
+
+@keyframes bouncing-loader {
+	to {
+		opacity: 0.1;
+		transform: translate3d(0, -16px, 0);
+	}
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.bouncing-loader {
+	display: flex;
+	justify-content: center;
 }
 
-.card {
-  padding: 2em;
+.bouncing-loader > div {
+	width: 16px;
+	height: 16px;
+	margin: 3rem 0.2rem;
+	background: #8385aa;
+	border-radius: 50%;
+	animation: bouncing-loader 0.6s infinite alternate;
 }
 
-.read-the-docs {
-  color: #888;
+.bouncing-loader > div:nth-child(2) {
+	animation-delay: 0.2s;
+}
+
+.bouncing-loader > div:nth-child(3) {
+	animation-delay: 0.4s;
+}
+
+/** END LOADER STYLE **/
+
+/** START HEADER STYLE **/
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+header .title h1 {
+	font-size: 40px;
+}
+
+header .filters {
+	width: 530px;
+	max-width: 95%;
+	margin: auto;
+	/* margin-top: 50px; */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header .search {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin-right: 15px;
+}
+
+header .sort {
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+  background-color: #292929;
+}
+
+header .filters input,
+header .filters select {
+	font-size: 15px;
+	font-family: inherit;
+	color: #fff;
+	width: 100%;
+	padding: 10px 15px;
+	background-color: transparent;
+	border: 1px solid #fff;
+	outline: none;
+}
+
+header .filters input::placeholder {
+	color: #292929;
+}
+
+/** END HEADER STYLE **/
+
+.posts {
+	margin-top: 40px;
+	margin-bottom: 80px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+}
+
+.posts .post {
+	padding: 30px;
+	border: 1px solid #292929;
+	color: #292929;
+}
+
+.posts .post h2 {
+	font-size: 21px;
+	margin-bottom: 20px;
+}
+
+.posts .post p {
+	font-size: 16px;
 }
