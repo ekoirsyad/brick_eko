@@ -5,8 +5,6 @@ const getUsers = async (dispatch, query, page) => {
   dispatch({ type: USER_ACTION_TYPES.FETCH_USERS_REQUEST });
   
   try {
-    console.log("🚀 ~ file: actions.js:5 ~ getUsers ~ page:", page)
-    console.log("🚀 ~ file: actions.js:5 ~ getUsers ~ query:", query)
     const response = await search("users", query, page);
     const data = await response.json();
     dispatch({

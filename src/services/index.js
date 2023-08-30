@@ -5,7 +5,7 @@ const search = (type, search, page) => {
       method: "get",
       headers: new Headers({
         Accept: "application/vnd.github+json",
-        Authorization: "Bearer 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",
+        Authorization: "Bearer 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",
         "X-GitHub-Api-Version": "2022-11-28",
       }),
     }
