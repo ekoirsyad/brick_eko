@@ -10,7 +10,7 @@ import Loader from "../components/Loader";
 import { reposDispatcher } from "../states/repositories/actions";
 
 const Home = ({ state, getUser, getRepo }) => {
-  //   console.log("🚀 ~ file: Home.jsx:6 ~ Home ~ props:", state);
+    console.log("🚀 ~ file: Home.jsx:6 ~ Home ~ props:", import.meta.env.GIT_ENV);
 
   const [search, setSearch] = useState("eko");
   const [type, setType] = useState("users");
